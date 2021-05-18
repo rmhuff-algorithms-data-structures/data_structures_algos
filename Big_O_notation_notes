@@ -1,0 +1,74 @@
+Big O notation
+-----------------------------
+
+TIME COMPLEXITY
+Big O - a mathematical notation that describes the limiting
+behavior of a function when the argument tends toward a particular
+value or infinity. Or - is it scalable? What counts here is the
+exponential value of n. 2+n and 2n are negligible in comparison
+to n^2 <--- recall the algebra of one's youth.
+
+O(1) - a method that runs in constant time. i.e. print the first index of an array
+    as the array grows the performance remains the same.
+
+    sout(array[0])
+
+
+O(n) - a LINEAR growth in the cost of an algorithm. i.e. printing each item in an
+array using a loop. the time complexity increases linearly as the array grows. All
+of the examples below are O(n).
+
+    O(n)
+    for(i < array.length)
+        sout(array[i])
+
+    O(2n)
+    for(i < array.length)
+            sout(array[i])
+    for(i < array.length)
+            sout(array[i])
+
+    O(n+m)
+    for(i < array1.length)
+            sout(array[i])
+    for(i < array2.length)
+            sout(array[i])
+
+
+O(n^2) - An algorithm the runs in QUADRATIC time. i.e. finding the most common
+element in an array via nested for loops. Both examples below fall under the
+conventional label of O(n^2). However, example 2 in O(n^3).
+
+    O(n^2)
+        for(i < array1.length)
+                sout(array[i])
+            for(i < array2.length)
+                    sout(array[i])
+
+    O(n^3)
+        for(i < array1.length)
+                sout(array[i])
+            for(i < array2.length)
+                    sout(array[i])
+                for(i < array2.length)
+                        sout(array[i])
+
+
+O(log n) - An algorithm that grows in LOGARITHMIC time. This scales more efficiently than
+linear growth. i.e. a binary search. Imagine finding the last element in an array of size
+1M linearly, this requires 1M iterations. Finding an element in an array of size 1M with a
+binary search takes a maximum of 19 iterations.
+
+
+O(2^n) - EXPONENTIAL time. This is the opposite of logarithmic growth.
+
+______________________________________________________________________
+
+SPACE COMPLEXITY
+
+There is a trade off between the space and time onre must use to execute an algorithm.
+When considering space complexity, one only considers the additional space allocated
+relative to size of the input. On small systems with very little memory (smartwatch??)
+maybe salvaging space at the cost of time is ok since there is not a lot of data some inefficient
+algorithm must work through. On an enormous system, a network, space is plentiful an optimized
+algorithm that can get through mountains of data quickly becomes increasingly important.

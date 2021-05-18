@@ -1,0 +1,11 @@
+ARRAYS
+------
+Lookup - O(i)
+Insert - O(n)
+Delete - O(n)
+
+Arrays are stored consecutively in memory. This is what makes lookup so quick. If the first
+element on of array of integers is stored at 100. Given that integers are 4 bytes in Java, the
+calculation to find an element is simple.
+
+Arrays are static. This makes altering them a potentially costly operation.
