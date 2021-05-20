@@ -1,10 +1,9 @@
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] names) {
-        int[] arr = {10,20,30};
-        System.out.println(Arrays.toString(arr));
-        System.out.println(arr.length);
+        ArrayV1 arr = new ArrayV1(5);
+        arr.add(2);
+        arr.add(4);
+        arr.print();
     }
 }
 
