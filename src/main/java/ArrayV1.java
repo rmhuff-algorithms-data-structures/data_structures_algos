@@ -12,22 +12,15 @@ public class ArrayV1 {
             }
     }
 
-    //resize if full
     public void add(int item){
-        if (currentCount < elements.length) {
-            elements[currentCount] = item;
-            currentCount++;
-        } else if (currentCount == elements.length) {
-            //create a new array that is elements.length + 1;
-            //put all elements into that array w/ a for loop;
-            //create a setter
-            //set elements to that new array
+        if (elements.length == currentCount) {
+            int[] replaceElementsWith = new int[currentCount * 2];
+            for(int i = 0; i < currentCount; i++) {
+                replaceElementsWith[i] = elements[i];
+            }
+            elements = replaceElementsWith;
         }
+        elements[currentCount++] = item;
     }
-
-    public void removeAt(int index){
-
-    }
-
 
 }
