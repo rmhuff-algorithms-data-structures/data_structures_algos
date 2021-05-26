@@ -13,6 +13,8 @@ public class Main {
         System.out.println();
         arr.removeAt(1);
         arr.print();
+        System.out.println();
+        System.out.println(arr.indexOf(5));
     }
 }
 

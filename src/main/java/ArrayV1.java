@@ -24,19 +24,22 @@ public class ArrayV1 {
     }
 
     public void removeAt(int index) {
-        //validate index
-        //create a new array and populate 'around the index'
-        int[] replaceElementsWith = new int[currentCount];
-        if(index > 0 && index <= currentCount) {
-            for (int i = 0; i < index; i++) {
-                replaceElementsWith[i] = elements[i];
-            }
-            for (int j = index + 1; j < currentCount; j++) {
-                replaceElementsWith[j-1] = elements[j];
-            }
-        currentCount--;
-        elements=replaceElementsWith;
+        if(index < 0 || index >= currentCount) {
+            throw new IllegalArgumentException();
         }
+        for (int i = index; i < currentCount; i++) {
+            elements[i] = elements[i + 1];
+        }
+        currentCount--;
+    }
+
+    public int indexOf(int item){
+        for(int i = 0; i < currentCount; i++){
+            if (elements[i] == item) {
+                return i;
+            }
+        }
+        return -1;
     }
 
 }
