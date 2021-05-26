@@ -23,4 +23,20 @@ public class ArrayV1 {
         elements[currentCount++] = item;
     }
 
+    public void removeAt(int index) {
+        //validate index
+        //create a new array and populate 'around the index'
+        int[] replaceElementsWith = new int[currentCount];
+        if(index > 0 && index <= currentCount) {
+            for (int i = 0; i < index; i++) {
+                replaceElementsWith[i] = elements[i];
+            }
+            for (int j = index + 1; j < currentCount; j++) {
+                replaceElementsWith[j-1] = elements[j];
+            }
+        currentCount--;
+        elements=replaceElementsWith;
+        }
+    }
+
 }

@@ -7,6 +7,12 @@ public class Main {
         arr.add(5);
         arr.add(1);
         arr.print();
+        arr.removeAt(2);
+        System.out.println();
+        arr.print();
+        System.out.println();
+        arr.removeAt(1);
+        arr.print();
     }
 }
 
