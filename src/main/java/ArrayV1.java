@@ -42,4 +42,44 @@ public class ArrayV1 {
         return -1;
     }
 
+    public int max(){
+        int max = 0;
+        for(int i = 0; i < currentCount; i++) {
+            if(elements[i] > max) {
+                max = elements[i];
+            }
+        }
+        return max;
+    }
+
+    public int[] intersect(int[] arr){
+        int[] tempArr = new int[currentCount];
+        int count = 0;
+        for (int i = 0; i < currentCount; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                if(elements[i] == arr[j]) {
+                    tempArr[count] = elements[i];
+                    count++;
+                    break;
+                }
+            }
+        }
+        int[] intersectingValues = new int[count];
+        for(int i = 0; i < count; i++) {
+            intersectingValues[i] = tempArr[i];
+        }
+        return intersectingValues;
+    }
+
+    public int[] reverse(){
+        for (int i = 0; i < currentCount/2; i++) {
+            int temp = elements[i];
+            elements[i] = elements[currentCount];
+            elements[currentCount] = temp;
+        }
+        return elements;
+    }
+
+
+
 }
